@@ -1,5 +1,7 @@
 # Component
-Estimated task time 4h. (possibly more or less). Please commit gradually to see progress of task completion.
+Estimated task time **4h.** (possibly more or less). Please commit gradually to see progress of task completion.
+Please use React (in away you want), CSS/SCSS/less/Styled components does not matter
+
 
 Main objective:
 ![role](materials/role-module.png)
@@ -27,6 +29,7 @@ Bonus points:
 - [ ] Readable and understandable types(TS)
 - [ ] Dev docs - how to use component (as it like npm module)
 - [ ] Build - script to minified lib version
+- [ ] Crossbrowser prefixed styles + polyfills (production readiness + IE11)
 
 ## Install
 

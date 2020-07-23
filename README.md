@@ -7,6 +7,7 @@ Main objective:
 
 
 ![role](materials/role-module.png)
+
 Make component with UI shown above. Inside dropdown should have:
  - Dropdown predefined values (User, Member, Admin) + "Custom" role
  - Changed predefined values(User, Member, Admin) in dropdown will update state of checkboxes to different values

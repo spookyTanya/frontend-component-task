@@ -4,6 +4,8 @@ Please use React (in away you want), CSS/SCSS/less/Styled components does not ma
 
 
 Main objective:
+
+
 ![role](materials/role-module.png)
 Make component with UI shown above. Inside dropdown should have:
  - Dropdown predefined values (User, Member, Admin) + "Custom" role

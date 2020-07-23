@@ -20,7 +20,7 @@ Role examples:
 Goals:
 - [ ] Make checkboxes(images inside [materials folder](/materials)) and dropdowns components (without native select, checkbox and without UI Frameworks)
 - [ ] Callback on changing user role(dropdown) will return current role and checkbox state
-- [ ] On save return current value with role and checkbox state
+- [ ] On save invoke callback with current value with role and checkbox states
 
 
 Bonus points:

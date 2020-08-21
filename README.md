@@ -1,14 +1,17 @@
 # Component
-Estimated task time **4h.** (possibly more or less). Please commit gradually to see progress of task completion.
+Estimated task time **2 working days.** (possibly more or less). Please commit gradually to see progress of task completion.
 Please use React (in away you want), CSS/SCSS/less/Styled components does not matter
 
 
 Main objective:
 ![role](materials/role-module.png)
-Make component with UI shown above. Inside dropdown should have:
+Make component with UI **look-alike** on sceenshot (don't spent too much time). Inside dropdown should have:
+ - Save button
  - Dropdown predefined values (User, Member, Admin) + "Custom" role
  - Changed predefined values(User, Member, Admin) in dropdown will update state of checkboxes to different values
     - All predefined roles will have no possibility(read-only) to change values of checkboxes
+
+Bonus round:
  - Selecting "Custom" role will allow to set any positions of checkboxes
     - Default state: all checkboxes unchecked
 
@@ -18,9 +21,9 @@ Role examples:
 - Member - can only view and share gems and folders
 
 Goals:
-- [ ] Make checkboxes(images inside [materials folder](/materials)) and dropdowns components (without native select, checkbox and without UI Frameworks)
+- [ ] Make checkboxes(if you want custom implementation to use there is provided images inside [materials folder](/materials)) and dropdowns components
 - [ ] Callback on changing user role(dropdown) will return current role and checkbox state
-- [ ] On save invoke callback with current value with role and checkbox states
+- [ ] On button click invoke callback with current value with role and checkbox states
 
 
 Bonus points:

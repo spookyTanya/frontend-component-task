@@ -4,15 +4,19 @@ Please use React (in away you want), CSS/SCSS/less/Styled components does not ma
 
 
 Main objective:
+
 ![role](materials/role-module.png)
-Make component with UI **look-alike** on sceenshot (don't spent too much time). Inside dropdown should have:
+
+Make component with UI **look-alike** on sceenshot (don't spent too much time possibly to use library or standart html). 
+
+Inside dropdown should have:
  - Save button
- - Dropdown predefined values (User, Member, Admin) + "Custom" role
+ - Dropdown **predefined values** (User, Member, Admin) (+ if you do bonus "Custom" role)
  - Changed predefined values(User, Member, Admin) in dropdown will update state of checkboxes to different values
-    - All predefined roles will have no possibility(read-only) to change values of checkboxes
+    - All predefined roles will have **no possibility(read-only)** to change values of checkboxes
 
 Bonus round:
- - Selecting "Custom" role will allow to set any positions of checkboxes
+ - Selecting "Custom" role will allow to set **any** positions of checkboxes
     - Default state: all checkboxes unchecked
 
 Role examples:

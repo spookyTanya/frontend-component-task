@@ -1,3 +1,27 @@
-input.checked + label{
-  color: plum;
+.checkbox-wrapper{
+  margin-right: 15px;
+}
+
+input[type=checkbox]{
+  display: none;
+}
+
+input[type=checkbox] + span:before {
+  background-image: url("../../../materials/uncheck.png");
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  content: "";
+  top: 5px;
+  margin-right: 5px;
+  position: relative;
+  background-size: cover;
+}
+
+input[type=checkbox]:checked + span:before {
+  background-image: url("../../../materials/check.png");
+}
+
+input[type=checkbox]:disabled + span:before{
+  opacity: 0.5;
 }

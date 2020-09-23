@@ -1,10 +1,10 @@
 import React from "react";
 import Main from "./components/Main";
+import Emitter from "./emitter";
 
 const data = {
-  currentUser: "admin",
+  currentUser: "user",
   users: ["admin", "user", "member"],
-  checkboxes: ["create", "update", "move", "delete", "view", "share"],
   userData: {
     admin: {
       folders: {
@@ -17,7 +17,7 @@ const data = {
       }
     },
     user: {
-      fol: {
+      folders: {
         availableItems: ["create", "update", "view", "share"],
         selectedItems: ["create", "update", "view", "share"]
       },
@@ -27,7 +27,7 @@ const data = {
       }
     },
     member: {
-      fol: {
+      folders: {
         availableItems: ["view", "share"],
         selectedItems: ["view", "share"]
       },
@@ -39,11 +39,17 @@ const data = {
   }
 };
 
-const App = () => (
-  <div>
-    <Main data={data}/>
-    <button type="button">Save</button>
-  </div>
-);
+const App = () => {
+  const handleClick = () => {
+    Emitter.emit("SAVE_CHANGES", {});
+  };
+
+  return (
+    <div>
+      <Main/>
+      <button type="button" onClick={handleClick}>Save</button>
+    </div>
+  );
+};
 
 export default App;

@@ -1,38 +1,47 @@
 import React, { useState, useEffect } from "react";
 import Checkbox from "../Checkbox";
+import './row.scss';
 
-const Row = ({ name, data }) => {
-  const [checked, setChecked] = useState(data.userData[data.currentUser][name].selectedItems);
+interface Props {
+  name: string;
+  data: string[];
+  checkboxArray: string[];
+  checkboxSetter: (string: React.Dispatch<React.SetStateAction<string>>) => void;
+}
+
+const Row: React.FC<Props> = ({ name, data, checkboxArray, checkboxSetter }) => {
+  const checkboxNames = ["create", "update", "move", "delete", "view", "share"];
 
   const handleCheckbox = (event) => {
     const checkboxName = event.currentTarget.name;
-    const elemIndex = checked.indexOf(checkboxName);
+    const elemIndex = checkboxArray.indexOf(checkboxName);
 
     if (event.currentTarget.checked === false) {
       if (elemIndex !== -1) {
-        setChecked(checked.filter(elem => elem !== checkboxName));
+        checkboxSetter(checkboxArray.filter(elem => elem !== checkboxName));
       }
     } else {
-      setChecked([...checked, checkboxName]);
+      checkboxSetter([...checkboxArray, checkboxName]);
     }
   };
 
-  useEffect(() => {
-    console.log(checked);
-  }, [checked]);
-
   return (
-    <div>
+    <div className='row-wrapper'>
       <h4>{name}</h4>
-      {data.checkboxes.map(
-        (item) => (
-          <Checkbox
-            name={item}
-            handler={handleCheckbox}
-            isChecked={data.userData[data.currentUser][name].selectedItems.indexOf(item) !== -1}
-            isDisabled={data.userData[data.currentUser][name].availableItems.indexOf(item) === -1}/>
-        )
-      )}
+      <div className="checkbox-container">
+        {checkboxNames.map(
+          (item, index) => {
+            return (
+            <Checkbox
+              name={item}
+              key={index}
+              handler={handleCheckbox}
+              isChecked={checkboxArray.indexOf(item) !== -1}
+              isDisabled={data.availableItems.indexOf(item) === -1}/>
+            );
+          }
+        )}
+      </div>
     </div>
   );
 };

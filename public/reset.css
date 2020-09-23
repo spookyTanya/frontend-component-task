@@ -1,0 +1,12 @@
+body{
+  margin: 0;
+}
+
+#root{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Source Sans Pro', sans-serif;
+  align-items: center;
+  justify-content: center; background-color: #e0e0e0
+}

@@ -1,19 +1,19 @@
 import React, {useState} from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from "redux";
+import {selectUser} from '../../actions/selectUser';
+import './select.scss';
 
-const Select = () => {
-  const [user, setUser] = useState('');
-
+const Select = ({selectUser}) => {
   const handleSelect = (event) => {
-    console.log(event.currentTarget.value)
-    setUser(event.currentTarget.value)
+    selectUser(event.currentTarget.value.toLowerCase());
   };
 
   return (
-    <div>
+    <div className='select-wrapper'>
       <span>User Role</span>
       <select name="userRole" onChange={handleSelect}>
-        <option value="" hidden defaultValue>Select an option</option>
-        <option value="User">User</option>
+        <option value="User" defaultValue>User</option>
         <option value="Member">Member</option>
         <option value="Admin">Admin</option>
       </select>
@@ -21,4 +21,8 @@ const Select = () => {
   );
 };
 
-export default Select;
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({selectUser: selectUser}, dispatch);
+};
+
+export default connect(null, mapDispatchToProps)(Select);

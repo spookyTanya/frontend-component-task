@@ -1,0 +1,12 @@
+.row-wrapper{
+  //border-bottom: 1px solid #ccc;
+  h4{
+    margin-bottom: 10px;
+    text-transform: capitalize;
+  }
+  .checkbox-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0 15px;
+  }
+}
